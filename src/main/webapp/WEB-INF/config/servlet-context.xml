@@ -9,18 +9,19 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
-	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- 핸들러 어댑터,핸들러 맵핑 , 스프링의 여러 어노테이션을 사용할 수 있게 하는 선언 -->
 	<annotation-driven />
 
-	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<!-- 정적자원 맵핑 resource폴더 아래 파일은 컨트롤러로 실행되지 않고 곧바로 실행-->
 	<resources mapping="/resources/**" location="/resources/" />
 
-	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<!-- 뷰 리졸버 (컨트롤러에서 받아온 경로를 최종적으로 합성) -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- 해당 패키지를 읽어서 @Controller가 붙어있는 클래스를 bean(객체)로 생성 -->
 	<context:component-scan base-package="com.simple.controller" />
 	
 	
