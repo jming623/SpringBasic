@@ -29,8 +29,7 @@ public class ScoreController {
 	@Autowired
 	@Qualifier("scoreService")
 	private ScoreService scoreService;
-	
-	
+		
 	//목록화면(화면으로 이동할 때 list를 가지고 나간다.)
 	@RequestMapping("/scoreList")
 	public void scoreList(Model model) {
