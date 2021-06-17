@@ -30,4 +30,11 @@ public class ScoreDAOImp implements ScoreDAO{
 		return list;
 	}
 
+	@Override
+	public void delete(int num) {
+		
+		System.out.println("삭제한 인덱스:"+num);
+		list.remove(num); 
+	}
+
 }

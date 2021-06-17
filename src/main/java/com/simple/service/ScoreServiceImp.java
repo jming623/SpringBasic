@@ -32,6 +32,12 @@ public class ScoreServiceImp implements ScoreService{
 		//값을 빼와서 처리할게 없다면 아래처럼 바로 선언가능
 		return scoreDAO.getList();
 	}
+
+	@Override
+	public void delete(int num) {
+		
+		scoreDAO.delete(num);		
+	}
 	
 	
 }

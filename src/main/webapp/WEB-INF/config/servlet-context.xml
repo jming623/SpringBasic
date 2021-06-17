@@ -22,7 +22,8 @@
 	</beans:bean>
 	
 	<!-- 해당 패키지를 읽어서 @Controller가 붙어있는 클래스를 bean(객체)로 생성 -->
-	<context:component-scan base-package="com.simple.*" />
+	<context:component-scan base-package="com.simple.*" /> 
+	<!-- 원래는 com.simple.controller로 controller만 타게만들어져 있었는데  com.simple.*로 시작하는 모든 파일을 타게 수정해 주었다.-->
 	
 	<!-- 3번째방법 (ScoreController참고)-->
 	<!--  <context:component-scan base-package="com.simple.service" /> --> <!-- 25라인에 com.simple.*로 한번에 처리할 수 있다. -->
