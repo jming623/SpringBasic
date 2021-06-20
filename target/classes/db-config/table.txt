@@ -1,0 +1,26 @@
+-- 계정 생성
+create user spring identified by spring;
+
+-- 권한 부여
+grant resource, connect to spring;
+
+-- 테이블스페이스
+alter user spring DEFAULT TABLESPACE users QUOTA UNLIMITED on users ; 
+
+-- 연습용 테이블 
+create table T_SCORE(
+    bno number(10) primary key,
+    name varchar2(20),
+    kor varchar2(20),
+    eng varchar2(20)
+);
+
+create sequence t_score_seq increment by 1 start with 1 nocache;
+
+-- 실습용 테이블
+create table t_board(
+    bno number(10) primary key,
+    name varchar2(20),
+    title varchar2(20),
+    content varchar2(20)
+);

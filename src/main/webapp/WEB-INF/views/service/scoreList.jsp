@@ -13,7 +13,7 @@
 	<c:forEach var="vo" items="${list }" varStatus="idx">
 	
 		이름:${vo.name }, 국어:${vo.kor }, 영어:${vo.eng }
-		<button type="button" onclick="location.href='scoreDelete?num=${idx.index}'">삭제</button> 
+		<button type="button" onclick="location.href='scoreDelete?num=${vo.bno}'">삭제</button> 
 		<!-- ${idx.index}는 리스트에 인덱스번호 반환-->
 		<br>
 		

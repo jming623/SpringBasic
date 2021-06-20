@@ -122,7 +122,45 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency> 
+		
+		<!-- 오라클 커넥터 -->
+		<dependency>
+    		<groupId>com.oracle.database.jdbc</groupId>
+    		<artifactId>ojdbc8</artifactId>
+    		<version>19.7.0.0</version>
+		</dependency>
+		<!-- 커넥션풀 -->
+		<dependency>
+    		<groupId>com.zaxxer</groupId>
+    		<artifactId>HikariCP</artifactId>
+    		<version>3.3.1</version>
+		</dependency>
+		<!-- 스프링jdbc -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-jdbc</artifactId>
+    		<version>${org.springframework-version}</version>
+		</dependency>
+		<!-- 스프링 테스트환경 지원 (Junit단위테스트 4.12이상 1버전과 함께 사용)-->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-test</artifactId>
+    		<version>${org.springframework-version}</version>
+    		<scope>test</scope>
+		</dependency>
+		<!-- MyBatis -->
+		<dependency>
+    		<groupId>org.mybatis</groupId>
+    		<artifactId>mybatis</artifactId>
+    		<version>3.4.6</version>
+		</dependency>
+		<!-- MyBatis-Spring -->
+		<dependency>
+    		<groupId>org.mybatis</groupId>
+    		<artifactId>mybatis-spring</artifactId>
+    		<version>1.3.2</version>
+		</dependency>
 	</dependencies>
 	
 	<!-- 4.메이븐 관련된 버전. 메이븐 컴파일 버전을 3.8.1으로 변경 메이븐 컴파일 버전 1.8로변경 -->

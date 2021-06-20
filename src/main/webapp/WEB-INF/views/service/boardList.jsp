@@ -31,7 +31,7 @@
 		</tr>
 		<c:forEach var="vo" items="${list }" varStatus="idx">
 		<tr>
-			<td>${idx.index+1 }</td>
+			<td>${vo.bno }</td>
 			<td>${vo.name }</td>
 			<td>${vo.title }</td>
 			<td>${vo.content }</td>
@@ -39,7 +39,7 @@
 			1. boardDelete로 삭제 처리하세요. 
 			2. 삭제 후엔 목록화면으로 리다이렉트 하세요.
 			-->
-			<td><input type="button" value="삭제" onclick="location.href='delete?num=${idx.index}'"></td>
+			<td><input type="button" value="삭제" onclick="location.href='delete?num=${vo.bno}'"></td>
 		</tr>
 		</c:forEach>
 	</table>

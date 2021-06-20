@@ -1,7 +1,8 @@
 package com.simple.command;
 
 public class ScoreVO {
-
+	
+	private int bno;
 	private String name;
 	private String kor;
 	private String eng;
@@ -10,8 +11,9 @@ public class ScoreVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ScoreVO(String name, String kor, String eng) {
+	public ScoreVO(int bno, String name, String kor, String eng) {
 		super();
+		this.bno = bno;
 		this.name = name;
 		this.kor = kor;
 		this.eng = eng;
@@ -19,7 +21,15 @@ public class ScoreVO {
 
 	@Override
 	public String toString() {
-		return "ScoreVO [name=" + name + ", kor=" + kor + ", eng=" + eng + "]";
+		return "ScoreVO [bno=" + bno + ", name=" + name + ", kor=" + kor + ", eng=" + eng + "]";
+	}
+
+	public int getBno() {
+		return bno;
+	}
+
+	public void setBno(int bno) {
+		this.bno = bno;
 	}
 
 	public String getName() {
@@ -45,6 +55,9 @@ public class ScoreVO {
 	public void setEng(String eng) {
 		this.eng = eng;
 	}
+
+	
+
 	
 	
 }
